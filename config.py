@@ -3,4 +3,7 @@ from pathlib import Path
 
 
 def load(path):
-    return json.loads(Path(path).read_text())
+    raw = Path(path).read_text()
+    if not raw.strip():
+        return {}
+    return json.loads(raw)
