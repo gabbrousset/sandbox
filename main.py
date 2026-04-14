@@ -8,8 +8,7 @@ def main(argv=None):
     p = argparse.ArgumentParser()
     p.add_argument("config")
     args = p.parse_args(argv)
-    cfg = load(args.config)
-    print(cfg)
+    print(load(args.config))
     return 0
 
 
